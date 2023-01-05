@@ -2,7 +2,7 @@ import { useState, useEffect, ReactNode, FC } from "react";
 
 const NavLink: FC<NavLinkProps> = ({ children, target }) => {
   const [isActive, setIsActive] = useState<boolean>(false);
-  const headerHeight: number = 92;
+  const headerHeight: number = 82;
 
   useEffect(() => {
     const targetElement = document.querySelector<HTMLElement>(target);

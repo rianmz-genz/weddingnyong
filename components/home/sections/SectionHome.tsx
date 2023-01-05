@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import contentData from "../../../store/contentData";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,6 +15,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SectionHome: FC<SectionHomeProps> = ({
   title,
@@ -22,9 +25,13 @@ const SectionHome: FC<SectionHomeProps> = ({
   titleWhy,
   descriptionWhy,
 }) => {
+  useEffect(()=> {
+    AOS.init()
+  },[])
   SwiperCore.use([Navigation, Pagination, Autoplay]);
   return (
     <section
+    data-aos="fade-up"
       id="home"
       className="w-full h-fit pt-12 bg-white flex flex-col items-center"
     >
@@ -52,9 +59,9 @@ const SectionHome: FC<SectionHomeProps> = ({
           <div className="w-full h-[30rem] bg-green-200 rounded-lg "></div>
         </SwiperSlide>
       </Swiper>
-      <h1 className="text-[#8758ff] font-bold text-3xl">{titleWhy}</h1>
-      <p className="text-center w-7/12 mt-3">{descriptionWhy}</p>
-      <div className="grid grid-cols-2 place-items-center w-8/12 gap-6 mt-6">
+      <h1 data-aos="fade-up" className="text-[#8758ff] font-bold text-3xl">{titleWhy}</h1>
+      <p data-aos="fade-up" className="text-center w-7/12 mt-3">{descriptionWhy}</p>
+      <div data-aos="fade-up" className="grid grid-cols-2 place-items-center w-8/12 gap-6 mt-6">
         {contentData.features.map((feature, index) => (
           <div
             key={index}
