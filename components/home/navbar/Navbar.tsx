@@ -9,7 +9,7 @@ import NavItem from "./NavItem";
 import NavLink from "./NavLink";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   return (
     <header className="bg-white z-10 max-sm:h-14 fixed transition-all duration-300 lg:w-3/12 h-screen">
       <nav
@@ -25,11 +25,26 @@ const Navbar = () => {
           Weddingnyong
         </a>
         <NavItem show={isMenuOpen}>
-          <NavLink target="#home"><CgHomeAlt/>Beranda</NavLink>
-          <NavLink target="#feature"><VscSymbolProperty/>Fitur</NavLink>
-          <NavLink target="#design"><BiLayout/>Desain</NavLink>
-          <NavLink target="#price"><IoPricetagOutline/>Harga</NavLink>
-          <NavLink target="#testimonial"><BsEmojiSmile/>Testimoni</NavLink>
+          <NavLink target="#home">
+            <CgHomeAlt />
+            Beranda
+          </NavLink>
+          <NavLink target="#feature">
+            <VscSymbolProperty />
+            Fitur
+          </NavLink>
+          <NavLink target="#design">
+            <BiLayout />
+            Desain
+          </NavLink>
+          <NavLink target="#price">
+            <IoPricetagOutline />
+            Harga
+          </NavLink>
+          <NavLink target="#testimonial">
+            <BsEmojiSmile />
+            Testimoni
+          </NavLink>
         </NavItem>
       </nav>
     </header>

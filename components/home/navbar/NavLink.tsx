@@ -1,8 +1,8 @@
-import { useState, useEffect, ReactNode, FC } from 'react';
+import { useState, useEffect, ReactNode, FC } from "react";
 
 const NavLink: FC<NavLinkProps> = ({ children, target }) => {
-  const [isActive, setIsActive] = useState(false);
-  const headerHeight = 92;
+  const [isActive, setIsActive] = useState<boolean>(false);
+  const headerHeight: number = 92;
 
   useEffect(() => {
     const targetElement = document.querySelector<HTMLElement>(target);
@@ -15,9 +15,7 @@ const NavLink: FC<NavLinkProps> = ({ children, target }) => {
           window.scrollY + headerHeight >
             targetElement.offsetTop - headerHeight &&
           window.scrollY <
-            targetElement.offsetTop +
-              targetElement.clientHeight -
-              headerHeight
+            targetElement.offsetTop + targetElement.clientHeight - headerHeight
         ) {
           setIsActive(true);
         } else {
@@ -31,9 +29,7 @@ const NavLink: FC<NavLinkProps> = ({ children, target }) => {
       <a
         href={target}
         className={` text-xl flex items-center gap-3 mb-4 ${
-          isActive
-            ? "font-semibold text-[#8758ff]"
-            : "text-gray-500"
+          isActive ? "font-semibold text-[#8758ff]" : "text-gray-500"
         } hover:text-[#8758ff]`}
         onClick={(e) => {
           e.preventDefault();

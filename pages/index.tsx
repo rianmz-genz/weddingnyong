@@ -1,13 +1,13 @@
-import Head from 'next/head';
+import Head from "next/head";
 // componentsImport
-import Container from '../components/home/layout/Container';
-import Navbar from '../components/home/navbar/Navbar';
-import ContainerContent from '../components/home/layout/ContainerContent';
-import SideInformation from '../components/home/side/SideInformation';
+import Container from "../components/home/layout/Container";
+import Navbar from "../components/home/navbar/Navbar";
+import ContainerContent from "../components/home/layout/ContainerContent";
+import SideInformation from "../components/home/side/SideInformation";
 // sectionsImport
-import SectionHome from '../components/home/sections/SectionHome';
-import SectionFeatures from '../components/home/sections/SectionFeatures';
-import SectionDesign from '../components/home/sections/SectionDesign';
+import SectionHome from "../components/home/sections/SectionHome";
+import SectionFeatures from "../components/home/sections/SectionFeatures";
+import SectionDesign from "../components/home/sections/SectionDesign";
 
 export default function Home() {
   return (
@@ -29,7 +29,7 @@ export default function Home() {
           property="og:description"
           content={`Undangan Pernikahan Online Gratis Weddingnyong`}
         />
-         <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.svg" />
         {/* <meta name="google-site-verification" content="fMEql0p_U-xUj-bdslwAUxrJN7YVAak5yRExytckLLg" />
         <meta property="og:url" content="https://adrianajisepta.my.id" />
         <meta
@@ -40,20 +40,20 @@ export default function Home() {
       <Navbar />
       <ContainerContent>
         <SectionHome
-          title='Undangan Pernikahan Online'
-          description='Dikemas dalam bentuk website yang menarik serta dapat dibagikan kapanpun dan dimanapun.'
+          title="Undangan Pernikahan Online"
+          description="Dikemas dalam bentuk website yang menarik serta dapat dibagikan kapanpun dan dimanapun."
           titleWhy="Mengapa harus WeddingNyong?"
           descriptionWhy="Kami hadir sebagai sebuah solusi untuk membantu calon mempelai yang berbahagia untuk membuat undangan pernikahan online dengan cepat dan mudah."
         />
-        <SectionFeatures 
-          title='Fitur Terbaik'
-          description='Fitur undangan pernikahan online terbaik abad ini yang siap untuk digunakan'
-          titleCreateInvitations='Langkah Pembuatan Undangan'
-          descriptionCreateInvitations='Hanya butuh beberapa langkah dan menit saja hingga undangan Kamu siap digunakan'
+        <SectionFeatures
+          title="Fitur Terbaik"
+          description="Fitur undangan pernikahan online terbaik abad ini yang siap untuk digunakan"
+          titleCreateInvitations="Langkah Pembuatan Undangan"
+          descriptionCreateInvitations="Hanya butuh beberapa langkah dan menit saja hingga undangan Kamu siap digunakan"
         />
         <SectionDesign
-          title='Pilih Desain'
-          description='Pilih tema undangan pernikahan yang menarik serta unik'
+          title="Pilih Desain"
+          description="Pilih tema undangan pernikahan yang menarik serta unik"
         />
       </ContainerContent>
       <SideInformation />
