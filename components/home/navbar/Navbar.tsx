@@ -4,14 +4,19 @@ import { BiLayout } from "react-icons/bi";
 import { IoPricetagOutline } from "react-icons/io5";
 import { BsEmojiSmile } from "react-icons/bs";
 import { VscClose, VscSymbolProperty } from "react-icons/vsc";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavItem from "./NavItem";
 import NavLink from "./NavLink";
-
+// importing aos
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <header className="bg-white z-10 max-sm:h-14 fixed transition-all duration-300 lg:w-3/12 h-screen">
+    <header data-aos="fade-right" data-aos-delay="200" className="bg-white z-10 max-sm:h-14 fixed transition-all duration-300 lg:w-3/12 h-screen">
       <nav
         itemScope
         itemType="https://schema.org/SiteNavigationElement"

@@ -1,26 +1,32 @@
 import React, { FC, useEffect } from "react";
 import contentData from "../../../store/contentData";
 // importing aos
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 const SectionFeatures: FC<SectionFeatureProps> = ({
   title,
   description,
   titleCreateInvitations,
   descriptionCreateInvitations,
 }) => {
-    useEffect(()=> {
-        AOS.init()
-      },[])
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section
-      data-aos="fade-up"
       id="feature"
       className="w-full h-fit py-12 bg-white flex flex-col items-center"
     >
-      <h1 className="text-[#8758ff] font-bold text-3xl">{title}</h1>
-      <p className="text-center w-7/12 my-3">{description}</p>
-      <div className="grid grid-cols-2 place-items-center w-8/12 gap-6 my-8">
+      <h1 data-aos="fade-up" className="text-[#8758ff] font-bold text-3xl">
+        {title}
+      </h1>
+      <p data-aos="fade-up" className="text-center w-7/12 my-3">
+        {description}
+      </p>
+      <div
+        data-aos="fade-up"
+        className="grid grid-cols-2 place-items-center w-8/12 gap-6 my-8"
+      >
         {contentData.featureItems.map((feature, index) => (
           <div
             key={index}
@@ -37,11 +43,28 @@ const SectionFeatures: FC<SectionFeatureProps> = ({
       <h1 data-aos="fade-up" className="text-[#8758ff] font-bold text-3xl mt-3">
         {titleCreateInvitations}
       </h1>
-      <p data-aos="fade-up" className="text-center w-7/12 my-3">{descriptionCreateInvitations}</p>
-      <div data-aos="zoom-in" className="w-5/12 h-1 rounded-full my-8 relative bg-[#8758ff]">
-        <span data-aos="fade-right" data-aos-delay="200" className="w-3 h-3 rounded-full absolute block bg-[#8758ff] -top-1"></span>
-        <span data-aos="fade" data-aos-delay="200" className="w-3 h-3 rounded-full absolute block bg-[#8758ff] -top-1 left-1/2 -translate-x-1/2"></span>
-        <span data-aos="fade-left" data-aos-delay="200" className="w-3 h-3 rounded-full absolute block bg-[#8758ff] -top-1 right-0"></span>
+      <p data-aos="fade-up" className="text-center w-7/12 my-3">
+        {descriptionCreateInvitations}
+      </p>
+      <div
+        data-aos="zoom-in"
+        className="w-5/12 h-1 rounded-full my-8 relative bg-[#8758ff]"
+      >
+        <span
+          data-aos="fade-right"
+          data-aos-delay="200"
+          className="w-3 h-3 rounded-full absolute block bg-[#8758ff] -top-1"
+        ></span>
+        <span
+          data-aos="fade"
+          data-aos-delay="200"
+          className="w-3 h-3 rounded-full absolute block bg-[#8758ff] -top-1 left-1/2 -translate-x-1/2"
+        ></span>
+        <span
+          data-aos="fade-left"
+          data-aos-delay="200"
+          className="w-3 h-3 rounded-full absolute block bg-[#8758ff] -top-1 right-0"
+        ></span>
       </div>
       <div data-aos="fade-up" className="grid grid-cols-3 w-7/12 gap-1">
         {contentData.stepCreateInvitations.map((step, index) => (
