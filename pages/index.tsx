@@ -66,10 +66,10 @@ export default function Home() {
           title="Apa Yang Mereka Katakan?"
           description="Undangan Pernikahan Anda Akan Terlihat Baik Di Semua Perangkat Komputer, Tablet Maupun Telepon Pintar."
         />
-      <Footer 
-        copyright="Copyright 2022"
-        description="Develop by Adrian Aji Septa & Didi Prasetyo"
-      />
+        <Footer
+          copyright="Copyright 2022"
+          description="Develop by Adrian Aji Septa & Didi Prasetyo"
+        />
       </ContainerContent>
       <SideInformation />
     </Container>

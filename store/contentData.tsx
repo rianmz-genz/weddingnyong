@@ -182,7 +182,7 @@ const contentData: contentData = {
     testimonials: [
         {
             username: "UcupzGg123",
-            coverinvitation: "bg-yellow-300",
+            coverinvitation: "bg-green-300",
             profileuser: "/asdjkj",
             commentuser: "Ga nyangka buat undangan pernikahan keren gak pake biaya gedecuma sekali bayar bisa dibagiin ke banyak tamu sekaligus makasih weddingnyong",
             invitationname: "BlackJavanese"
@@ -196,14 +196,14 @@ const contentData: contentData = {
         },
         {
             username: "Asep",
-            coverinvitation: "bg-indigo-300",
+            coverinvitation: "bg-green-300",
             profileuser: "/asdjkj",
             commentuser: "Undangan masa depan!!!",
             invitationname: "Pasteliens"
         },
         {
             username: "Adrean",
-            coverinvitation: "bg-slate-900",
+            coverinvitation: "bg-green-300",
             profileuser: "/asdjkj",
             commentuser: "ASDFGHJKL MAKASIH WEDDING NYONG!!",
             invitationname: "PinkyWingky"

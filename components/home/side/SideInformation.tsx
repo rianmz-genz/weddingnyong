@@ -3,13 +3,18 @@ import React from "react";
 // importing aos
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {useEffect} from 'react';
+import { useEffect } from "react";
 const SideInformation = () => {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-    <aside data-aos="fade-left" data-aos-delay="200" data-aos-duration="350" className="max-sm:hidden pt-8 z-10 fixed right-24 transition-all duration-300 lg:w-1/6 h-screen flex justify-start items-end flex-col">
+    <aside
+      data-aos="fade-left"
+      data-aos-delay="200"
+      data-aos-duration="350"
+      className="max-sm:hidden pt-8 z-10 fixed right-24 transition-all duration-300 lg:w-1/6 h-screen flex justify-start items-end flex-col"
+    >
       <Link
         href="/login"
         className="px-3 shadow-sm py-1 rounded-full bg-[#D0FF58] font-semibold"

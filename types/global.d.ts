@@ -37,7 +37,6 @@ declare interface SectionHomeProps{
   }
 
 //   content Datas 
-
 declare interface feature{
     logo?: string
     label: string
