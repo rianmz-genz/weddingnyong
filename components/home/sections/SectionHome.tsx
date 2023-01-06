@@ -36,10 +36,10 @@ const SectionHome: FC<SectionHomeProps> = ({
       className="w-full h-fit pt-12 bg-white flex flex-col items-center"
     >
       <h1 className="text-[#8758ff] font-bold text-3xl">{title}</h1>
-      <p className="text-center w-7/12 mt-3">{description}</p>
+      <p className="text-center w-7/12 max-sm:w-11/12 mt-3">{description}</p>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-        className="w-1/2 mt-8 mb-12 cursor-grab bannerswiper"
+        className="w-1/2 max-sm:w-11/12 mt-8 mb-12 cursor-grab bannerswiper"
         spaceBetween={8}
         loop
         autoplay={{

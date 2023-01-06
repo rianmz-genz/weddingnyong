@@ -1,4 +1,4 @@
-import { RiMenu4Fill } from "react-icons/ri";
+import { FiX, FiMenu } from "react-icons/fi";
 import { CgHomeAlt } from "react-icons/cg";
 import { BiLayout } from "react-icons/bi";
 import { IoPricetagOutline } from "react-icons/io5";
@@ -16,19 +16,27 @@ const Navbar = () => {
     AOS.init();
   }, []);
   return (
-    <header data-aos="fade-right" data-aos-delay="200" data-aos-duration="350" className="bg-white z-10 max-sm:h-14 fixed transition-all duration-300 lg:w-2/12 h-screen">
+    <header data-aos="fade-right" data-aos-delay="200" data-aos-duration="350" className="bg-white z-10 max-sm:h-14 fixed transition-all duration-300 lg:w-2/12 h-screen max-sm:w-11/12 max-sm:shadow-lg">
       <nav
         itemScope
         itemType="https://schema.org/SiteNavigationElement"
-        className="h-4/6 grid grid-rows-2 place-items-start"
+        className="h-4/6 grid grid-rows-2 place-items-start max-sm:h-full bg-white"
       >
+        <div className="w-full h-14 flex justify-between items-center px-2">
         <a
           href="#home"
-          className="text-xl text-[#8758ff] font-semibold flex mt-6 items-center"
+          className="text-xl text-[#8758ff] font-semibold flex mt-6 max-sm:mt-0 items-center"
         >
           <img src="/favicon.svg" className="w-9 mr-2" alt="WeddingnyongIcon" />
           Weddingnyong
         </a>
+        <button
+              className="text-gray-600 text-2xl lg:hidden dark:text-white duration-300 transition-all"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <FiX className="hover:rotate-90 duration-300 transition-all"/> : <FiMenu  className="hover:scale-125 duration-300 transition-all"/>}
+            </button>
+            </div>
         <NavItem show={isMenuOpen}>
           <NavLink target="#home">
             <CgHomeAlt />
