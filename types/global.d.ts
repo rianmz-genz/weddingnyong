@@ -30,6 +30,11 @@ declare interface SectionHomeProps{
     descriptionWhy: string
   }
   declare interface SectionPriceProps extends SectionDesignProps{}
+  declare interface SectionTestimonialsProps extends SectionDesignProps{}
+  declare interface FooterProps{
+    copyright: string
+    description: string
+  }
 
 //   content Datas 
 
@@ -43,10 +48,20 @@ declare interface design{
     name: string
     tier: string
 }
+declare interface benefitItem{
+    benefit: string
+}
 declare interface prices{
     tier: string
     price: number
-    benefits: string[]
+    benefits: benefitItem[]
+}
+declare interface testimonials{
+    username: string
+    coverinvitation: string
+    profileuser: string
+    commentuser: string
+    invitationname: string
 }
 declare interface contentData{
     features: feature[]
@@ -54,4 +69,5 @@ declare interface contentData{
     stepCreateInvitations: feature[]
     designs: design[]
     prices: prices[]
+    testimonials: testimonials[]
 }

@@ -9,6 +9,8 @@ import SectionHome from "../components/home/sections/SectionHome";
 import SectionFeatures from "../components/home/sections/SectionFeatures";
 import SectionDesign from "../components/home/sections/SectionDesign";
 import SectionPrices from "../components/home/sections/SectionPrices";
+import SectionTestimonials from "../components/home/sections/SectionTestimonials";
+import Footer from "../components/home/footer/Footer";
 
 export default function Home() {
   return (
@@ -60,6 +62,14 @@ export default function Home() {
           title="Harga Undangan"
           description="Pilih paket undangan pernikahan online sesuai dengan kebutuhanmu, tenang harganya terjangkau banget 😉"
         />
+        <SectionTestimonials
+          title="Apa Yang Mereka Katakan?"
+          description="Undangan Pernikahan Anda Akan Terlihat Baik Di Semua Perangkat Komputer, Tablet Maupun Telepon Pintar."
+        />
+      <Footer 
+        copyright="Copyright 2022"
+        description="Develop by Adrian Aji Septa & Didi Prasetyo"
+      />
       </ContainerContent>
       <SideInformation />
     </Container>

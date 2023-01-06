@@ -93,18 +93,120 @@ const contentData: contentData = {
     prices: [
         {
             tier: "Gratis",
-            price: 125000,
-            benefits: ["Edit tanpa batas","Quotes","Amplop Digital","Hitung Mundur", "Background Musik", "Masa Aktif 2 Hari"]
+            price: 0,
+            benefits: [
+                {
+                    benefit: "tulBetul"
+                },
+                {
+                    benefit: "Edit tanpa batas"
+                },
+                {
+                    benefit: "Quotes"
+                },
+                {
+                    benefit: "Amplop Digital"
+                },
+                {
+                    benefit: "Hitung Mundur"
+                },
+                {
+                    benefit: "Background Musik"
+                },
+                {
+                    benefit: "Masa Aktif 2 Hari"
+                },
+            ]
         },
         {
             tier: "Diamond",
             price: 125000,
-            benefits: ["Edit tanpa batas","Quotes","Amplop Digital","Hitung Mundur", "Background Musik", "Masa Aktif 2 Hari"]
+            benefits: [
+                {
+                    benefit: "Edit tanpa batas"
+                },
+                {
+                    benefit: "Apaya"
+                },
+                {
+                    benefit: "Quotes"
+                },
+                {
+                    benefit: "Amplop Digital"
+                },
+                {
+                    benefit: "Hitung Mundur"
+                },
+                {
+                    benefit: "Background Musik"
+                },
+                {
+                    benefit: "Masa Aktif 2 Hari"
+                },
+                {
+                    benefit: "Masa Aktif 2 Hari"
+                },
+                {
+                    benefit: "Masa Aktif 2 Hari"
+                },
+            ]
         },
         {
             tier: "Silver",
-            price: 125000,
-            benefits: ["Edit tanpa batas","Quotes","Amplop Digital","Hitung Mundur", "Background Musik", "Masa Aktif 2 Hari"]
+            price: 75000,
+            benefits: [
+                {
+                    benefit: "Gmaps"
+                },
+                {
+                    benefit: "Edit tanpa batas"
+                },
+                {
+                    benefit: "Quotes"
+                },
+                {
+                    benefit: "Amplop Digital"
+                },
+                {
+                    benefit: "Hitung Mundur"
+                },
+                {
+                    benefit: "Background Musik"
+                },
+                {
+                    benefit: "Masa Aktif 2 Hari"
+                },
+            ]
+        },
+    ],
+    testimonials: [
+        {
+            username: "UcupzGg123",
+            coverinvitation: "bg-yellow-300",
+            profileuser: "/asdjkj",
+            commentuser: "Ga nyangka buat undangan pernikahan keren gak pake biaya gedecuma sekali bayar bisa dibagiin ke banyak tamu sekaligus makasih weddingnyong",
+            invitationname: "BlackJavanese"
+        },
+        {
+            username: "Soeyono",
+            coverinvitation: "bg-green-300",
+            profileuser: "/asdjkj",
+            commentuser: "Makasih weddingnyong aku jadi ngirit budget pernikahan cuma beli sekali bisa dishare kesemuanya",
+            invitationname: "HappyPeach"
+        },
+        {
+            username: "Asep",
+            coverinvitation: "bg-indigo-300",
+            profileuser: "/asdjkj",
+            commentuser: "Undangan masa depan!!!",
+            invitationname: "Pasteliens"
+        },
+        {
+            username: "Adrean",
+            coverinvitation: "bg-slate-900",
+            profileuser: "/asdjkj",
+            commentuser: "ASDFGHJKL MAKASIH WEDDING NYONG!!",
+            invitationname: "PinkyWingky"
         },
     ]
 }

@@ -16,8 +16,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 // importing aos
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SectionHome: FC<SectionHomeProps> = ({
   title,
@@ -25,13 +25,13 @@ const SectionHome: FC<SectionHomeProps> = ({
   titleWhy,
   descriptionWhy,
 }) => {
-  useEffect(()=> {
-    AOS.init()
-  },[])
+  useEffect(() => {
+    AOS.init();
+  }, []);
   SwiperCore.use([Navigation, Pagination, Autoplay]);
   return (
     <section
-    data-aos="fade-up"
+      data-aos="fade-up"
       id="home"
       className="w-full h-fit pt-12 bg-white flex flex-col items-center"
     >
@@ -39,8 +39,8 @@ const SectionHome: FC<SectionHomeProps> = ({
       <p className="text-center w-7/12 mt-3">{description}</p>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-        className="w-1/2 mt-8 mb-12 cursor-grab"
-        spaceBetween={-3}
+        className="w-1/2 mt-8 mb-12 cursor-grab bannerswiper"
+        spaceBetween={8}
         loop
         autoplay={{
           delay: 3500,
@@ -49,19 +49,26 @@ const SectionHome: FC<SectionHomeProps> = ({
         slidesPerView={1}
         // pagination={{ dynamicBullets: true, }}
       >
-        <SwiperSlide className="border-3 border-black w-full px-2">
+        <SwiperSlide className=" border-3 border-black w-full">
           <div className="w-full h-[30rem] bg-yellow-200 rounded-lg "></div>
         </SwiperSlide>
-        <SwiperSlide className="border-3 border-black w-full pr-2">
+        <SwiperSlide className="border-3 border-black w-full">
           <div className="w-full h-[30rem] bg-indigo-600 rounded-lg "></div>
         </SwiperSlide>
         <SwiperSlide className="border-3 border-slate-900 w-full">
           <div className="w-full h-[30rem] bg-green-200 rounded-lg "></div>
         </SwiperSlide>
       </Swiper>
-      <h1 data-aos="fade-up" className="text-[#8758ff] font-bold text-3xl">{titleWhy}</h1>
-      <p data-aos="fade-up" className="text-center w-7/12 mt-3">{descriptionWhy}</p>
-      <div data-aos="fade-up" className="grid grid-cols-2 place-items-center w-8/12 gap-6 mt-6">
+      <h1 data-aos="fade-up" className="text-[#8758ff] font-bold text-3xl">
+        {titleWhy}
+      </h1>
+      <p data-aos="fade-up" className="text-center w-7/12 mt-3">
+        {descriptionWhy}
+      </p>
+      <div
+        data-aos="fade-up"
+        className="grid grid-cols-2 place-items-center w-8/12 gap-6 mt-6"
+      >
         {contentData.features.map((feature, index) => (
           <div
             key={index}

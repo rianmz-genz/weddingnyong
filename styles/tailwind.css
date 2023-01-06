@@ -8,7 +8,7 @@
         scroll-behavior: smooth;
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .swiper{
-        padding: 0.75rem 1rem;
+    .bannerswiper{
+        padding: 0.75rem 1rem !important;
     }
 }
