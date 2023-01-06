@@ -29,6 +29,7 @@ declare interface SectionHomeProps{
     titleWhy: string
     descriptionWhy: string
   }
+  declare interface SectionPriceProps extends SectionDesignProps{}
 
 //   content Datas 
 
@@ -40,10 +41,17 @@ declare interface feature{
 declare interface design{
     image: string
     name: string
+    tier: string
+}
+declare interface prices{
+    tier: string
+    price: number
+    benefits: string[]
 }
 declare interface contentData{
     features: feature[]
     featureItems: feature[]
     stepCreateInvitations: feature[]
-    design: design[]
+    designs: design[]
+    prices: prices[]
 }

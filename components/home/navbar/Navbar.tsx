@@ -16,7 +16,7 @@ const Navbar = () => {
     AOS.init();
   }, []);
   return (
-    <header data-aos="fade-right" data-aos-delay="200" className="bg-white z-10 max-sm:h-14 fixed transition-all duration-300 lg:w-3/12 h-screen">
+    <header data-aos="fade-right" data-aos-delay="200" data-aos-duration="350" className="bg-white z-10 max-sm:h-14 fixed transition-all duration-300 lg:w-2/12 h-screen">
       <nav
         itemScope
         itemType="https://schema.org/SiteNavigationElement"

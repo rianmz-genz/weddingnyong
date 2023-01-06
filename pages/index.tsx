@@ -8,6 +8,7 @@ import SideInformation from "../components/home/side/SideInformation";
 import SectionHome from "../components/home/sections/SectionHome";
 import SectionFeatures from "../components/home/sections/SectionFeatures";
 import SectionDesign from "../components/home/sections/SectionDesign";
+import SectionPrices from "../components/home/sections/SectionPrices";
 
 export default function Home() {
   return (
@@ -54,6 +55,10 @@ export default function Home() {
         <SectionDesign
           title="Pilih Desain"
           description="Pilih tema undangan pernikahan yang menarik serta unik"
+        />
+        <SectionPrices
+          title="Harga Undangan"
+          description="Pilih paket undangan pernikahan online sesuai dengan kebutuhanmu, tenang harganya terjangkau banget 😉"
         />
       </ContainerContent>
       <SideInformation />

@@ -68,11 +68,44 @@ const contentData: contentData = {
             description: "Sebarkan undanganmu kepada kerabat atau teman yang ingin di undang dan selamat berbahagia."
         },
     ],
-    design: [
+    designs: [
         {
             image: "/images/coverinvitations/",
-            name: "Black Javanese"
-        }
+            name: "Black Javanese",
+            tier: "Free"
+        },
+        {
+            image: "/images/coverinvitations/",
+            name: "Black Javanese",
+            tier: "Free"
+        },
+        {
+            image: "/images/coverinvitations/",
+            name: "Black Javanese",
+            tier: "Free"
+        },
+        {
+            image: "/images/coverinvitations/",
+            name: "Black Javanese",
+            tier: "Free"
+        },
+    ],
+    prices: [
+        {
+            tier: "Gratis",
+            price: 125000,
+            benefits: ["Edit tanpa batas","Quotes","Amplop Digital","Hitung Mundur", "Background Musik", "Masa Aktif 2 Hari"]
+        },
+        {
+            tier: "Diamond",
+            price: 125000,
+            benefits: ["Edit tanpa batas","Quotes","Amplop Digital","Hitung Mundur", "Background Musik", "Masa Aktif 2 Hari"]
+        },
+        {
+            tier: "Silver",
+            price: 125000,
+            benefits: ["Edit tanpa batas","Quotes","Amplop Digital","Hitung Mundur", "Background Musik", "Masa Aktif 2 Hari"]
+        },
     ]
 }
 
