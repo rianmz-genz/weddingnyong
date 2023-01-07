@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
-import { VscAccount } from "react-icons/vsc";
+import { VscAccount, VscArrowLeft } from "react-icons/vsc";
 import {
   AiOutlineKey,
   AiOutlineEyeInvisible,
@@ -13,7 +13,6 @@ const login = () => {
   const [password, setPassword] = useState<string>("");
   const passView = (e: string) => {
     setPassword(e);
-    e.length > 0 ? setView(true) : setView(false);
   };
   return (
     <section className="w-full min-h-screen bg-[#E0F6FC]">
@@ -33,8 +32,11 @@ const login = () => {
         />
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
-      <div className="w-10/12 mx-auto h-screen rounded-full bg-[#d4f3fb] flex justify-center items-center">
-        <form className="max-w-[450px] w-full h-fit bg-white shadow-[0px_0px_3px_rgba(0,0,0,.25)] py-7 px-4 rounded-xl">
+      <div className="w-10/12 mx-auto h-screen rounded-full max-sm:w-full max-sm:rounded-none bg-[#d4f3fb] flex justify-center items-center">
+        <form className="max-w-[450px] w-full max-sm:w-11/12 h-fit bg-white shadow-[0px_0px_3px_rgba(0,0,0,.25)] py-7 px-4 rounded-xl relative">
+          <a href="/" className=" absolute top-4 left-4 cursor-pointer">
+            <VscArrowLeft className="text-black text-opacity-75 text-2xl" />
+          </a>
           <label className="flex justify-center items-center mb-8">
             <Image
               src="/favicon.svg"
@@ -42,11 +44,11 @@ const login = () => {
               height={50}
               alt="WeddingnyongIcon"
             />
-            <h1 className="font-bold ml-3 text-3xl text-[#8758ff]">
+            <h1 className="font-bold ml-3 text-3xl max-sm:text-xl text-[#8758ff]">
               Weddingnyong
             </h1>
           </label>
-          <label className="w-10/12 mx-auto flex flex-col">
+          <label className="w-10/12 mx-auto flex flex-col max-sm:w-11/12">
             <h2 className="font-semibold mb-3">E-mail*</h2>
             <span className="flex text-xl shadow-[0px_0px_3px_rgba(0,0,0,.25)] px-2 py-1 rounded-full">
               <VscAccount className="text-3xl mr-3 text-[#181818] text-opacity-75" />
@@ -58,14 +60,14 @@ const login = () => {
               />
             </span>
           </label>
-          <label className="w-10/12 mx-auto flex flex-col mt-6 ">
+          <label className="w-10/12 mx-auto flex flex-col mt-6  max-sm:w-11/12">
             <h2 className="font-semibold mb-3">Password*</h2>
             <span className="flex text-xl px-2 py-1 rounded-full shadow-[0px_0px_3px_rgba(0,0,0,.25)]">
               <AiOutlineKey className="text-3xl mr-3 text-[#181818] text-opacity-75" />
               <input
                 onChange={(e) => passView(e.target.value)}
                 value={password}
-                type={view ? "password" : "text"}
+                type={view ? "text" : "password"}
                 id="gmail"
                 className="bg-transparent w-full placeholder:text-sm placeholder:text-[#181818] placeholder:text-opacity-75 text-sm focus:outline-none"
                 placeholder="password"
@@ -81,7 +83,7 @@ const login = () => {
           </label>
           <button
             type="submit"
-            className="bg-[#8758ff] text-white text-lg flex mx-auto items-center justify-center w-10/12 mt-10 rounded-full py-1 "
+            className="bg-[#8758ff] text-white text-lg max-sm:w-11/12 flex mx-auto items-center justify-center w-10/12 mt-10 rounded-full py-1 "
           >
             Masuk
           </button>
