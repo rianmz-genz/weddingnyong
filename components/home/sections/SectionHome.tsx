@@ -43,7 +43,7 @@ const SectionHome: FC<SectionHomeProps> = ({
         {description}
       </p>
       <Link
-        href="/login"
+        href="/auth/login"
         className="px-3 lg:hidden shadow-sm py-1 rounded-full bg-[#D0FF58] font-semibold text-sm mt-3 text-start"
       >
         Buat Undangan

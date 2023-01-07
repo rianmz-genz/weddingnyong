@@ -16,7 +16,7 @@ const SideInformation = () => {
       className="max-sm:hidden pt-8 z-10 fixed right-24 transition-all duration-300 lg:w-1/6 h-screen flex justify-start items-end flex-col"
     >
       <Link
-        href="/login"
+        href="/auth/login"
         className="px-3 shadow-sm py-1 rounded-full bg-[#D0FF58] font-semibold"
       >
         Buat Undangan
