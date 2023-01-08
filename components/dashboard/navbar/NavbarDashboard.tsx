@@ -1,16 +1,17 @@
 import { FiX, FiMenu } from "react-icons/fi";
 import { CgHomeAlt } from "react-icons/cg";
-import { BiLayout } from "react-icons/bi";
+import { BiLayout, BiLogOut, BiLogOutCircle } from "react-icons/bi";
 import { IoPricetagOutline } from "react-icons/io5";
 import { BsEmojiSmile } from "react-icons/bs";
-import { VscClose, VscSymbolProperty } from "react-icons/vsc";
+import { VscMail, VscSymbolProperty, VscAccount } from 'react-icons/vsc';
 import React, { useState, useEffect } from "react";
-import NavItem from "./NavItem";
-import NavLink from "./NavLink";
+
 // importing aos
 import AOS from "aos";
 import "aos/dist/aos.css";
-const Navbar = () => {
+import NavItemDashboard from './NavItemDashboard';
+import NavLinkDashboard from './NavLinkDashboard';
+const NavbarDashboard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   useEffect(() => {
     AOS.init();
@@ -29,7 +30,7 @@ const Navbar = () => {
       >
         <div className="w-full h-14 flex justify-between items-center px-2">
           <a
-            href="#home"
+            href="/"
             className="text-xl text-[#8758ff] font-semibold flex mt-6 max-sm:mt-0 items-center"
           >
             <img
@@ -50,31 +51,27 @@ const Navbar = () => {
             )}
           </button>
         </div>
-        <NavItem show={isMenuOpen}>
-          <NavLink target="#home">
+        <NavItemDashboard show={isMenuOpen}>
+          <NavLinkDashboard target="/dashboard/user/">
             <CgHomeAlt />
             Beranda
-          </NavLink>
-          <NavLink target="#feature">
-            <VscSymbolProperty />
-            Fitur
-          </NavLink>
-          <NavLink target="#price">
-            <IoPricetagOutline />
-            Harga
-          </NavLink>
-          <NavLink target="#design">
-            <BiLayout />
-            Desain
-          </NavLink>
-          <NavLink target="#testimonial">
-            <BsEmojiSmile />
-            Testimoni
-          </NavLink>
-        </NavItem>
+          </NavLinkDashboard>
+          <NavLinkDashboard target="/dashboard/user/undangan">
+            <VscMail />
+            Undangan
+          </NavLinkDashboard>
+          <NavLinkDashboard target="/dashboard/user/profile">
+            <VscAccount />
+            Profile
+          </NavLinkDashboard>
+          <NavLinkDashboard target="/auth/login/">
+            <BiLogOut />
+            Keluar
+          </NavLinkDashboard>
+        </NavItemDashboard>
       </nav>
     </header>
   );
 };
 
-export default Navbar;
+export default NavbarDashboard;

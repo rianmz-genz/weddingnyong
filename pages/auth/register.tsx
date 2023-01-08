@@ -79,11 +79,14 @@ const register = () => {
                 placeholder="password"
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <span onClick={() => setView(!view)} className="cursor-pointer">
+              <span
+                onClick={() => setView(!view)}
+                className="cursor-pointer h-8 flex items-center w-4"
+              >
                 {view ? (
-                  <AiOutlineEyeInvisible className="text-3xl  text-[#181818] text-opacity-75" />
+                  <AiOutlineEyeInvisible className="text-2xl  text-[#181818] text-opacity-75" />
                 ) : (
-                  <AiOutlineEye className="text-3xl  text-[#181818] text-opacity-75" />
+                  <AiOutlineEye className="text-2xl  text-[#181818] text-opacity-75" />
                 )}
               </span>
             </span>

@@ -70,3 +70,15 @@ declare interface contentData{
     prices: prices[]
     testimonials: testimonials[]
 }
+// users
+declare interface login {
+    username: string
+    password: string
+}
+declare interface ProfileProps{
+    imageSrc: string
+    name: string
+    gmail: string
+    username?: string | undefined
+}
+

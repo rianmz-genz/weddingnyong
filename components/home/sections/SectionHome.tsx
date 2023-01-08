@@ -42,12 +42,12 @@ const SectionHome: FC<SectionHomeProps> = ({
       <p className="text-center w-7/12 max-sm:w-11/12 mt-3 max-sm:text-start max-sm:text-sm">
         {description}
       </p>
-      <Link
+      <a
         href="/auth/login"
         className="px-3 lg:hidden shadow-sm py-1 rounded-full bg-[#D0FF58] font-semibold text-sm mt-3 text-start"
       >
         Buat Undangan
-      </Link>
+      </a>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         className="w-1/2 max-sm:w-11/12 mt-8 max-sm:mt-6 mb-12 cursor-grab bannerswiper"

@@ -18,6 +18,7 @@ const SectionDesign: FC<SectionDesignProps> = ({ title, description }) => {
       >
         {contentData.designs.map((design, index) => (
           <div
+          data-aos="fade-up"
             key={index}
             className="w-full group overflow-hidden relative rounded-xl h-96 flex flex-col items-center shadow-md justify-start bg-[#f3f4f6]  transition-all duration-300  hover:transition-all hoveer:duration-300 "
           >

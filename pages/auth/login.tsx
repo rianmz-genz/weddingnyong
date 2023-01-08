@@ -8,11 +8,24 @@ import {
   AiOutlineEye,
 } from "react-icons/ai";
 import { useState } from "react";
+import { useRouter } from "next/router";
 const login = () => {
   const [view, setView] = useState<boolean>(false);
   const [password, setPassword] = useState<string>("");
+  const [username, setUsername] = useState<string>("");
+  const [users, setUsers] = useState<login[]>([])
+  const router = useRouter();
   const passView = (e: string) => {
     setPassword(e);
+  };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setUsers([{username, password}])
+    if(username === "admin@gmail.com" && password === "admin"){
+      router.push("/dashboard/admin")
+    }else{
+      router.push("/dashboard/user")
+    }
   };
   return (
     <section className="w-full min-h-screen bg-[#E0F6FC]">
@@ -33,7 +46,10 @@ const login = () => {
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
       <div className="w-10/12 mx-auto h-screen rounded-full max-sm:w-full max-sm:rounded-none bg-[#d4f3fb] flex justify-center items-center">
-        <form className="max-w-[450px] w-full max-sm:w-11/12 h-fit bg-white shadow-[0px_0px_3px_rgba(0,0,0,.25)] py-7 px-4 rounded-xl relative">
+        <form
+          onSubmit={(e) => handleSubmit(e)}
+          className="max-w-[450px] w-full max-sm:w-11/12 h-fit bg-white shadow-[0px_0px_3px_rgba(0,0,0,.25)] py-7 px-4 rounded-xl relative"
+        >
           <a href="/" className=" absolute top-4 left-4 cursor-pointer">
             <VscArrowLeft className="text-black text-opacity-75 text-2xl" />
           </a>
@@ -53,6 +69,8 @@ const login = () => {
             <span className="flex text-xl shadow-[0px_0px_3px_rgba(0,0,0,.25)] px-2 py-1 rounded-full">
               <VscAccount className="text-3xl mr-3 text-[#181818] text-opacity-75" />
               <input
+                value={username}
+                onChange={(e)=> setUsername(e.target.value)}
                 id="gmail"
                 type="email"
                 className="bg-transparent w-full placeholder:text-sm placeholder:text-[#181818] placeholder:text-opacity-75 text-sm focus:outline-none"
@@ -72,11 +90,14 @@ const login = () => {
                 className="bg-transparent w-full placeholder:text-sm placeholder:text-[#181818] placeholder:text-opacity-75 text-sm focus:outline-none"
                 placeholder="password"
               />
-              <span onClick={() => setView(!view)} className="cursor-pointer">
+              <span
+                onClick={() => setView(!view)}
+                className="cursor-pointer h-8 flex items-center w-4"
+              >
                 {view ? (
-                  <AiOutlineEyeInvisible className="text-3xl  text-[#181818] text-opacity-75" />
+                  <AiOutlineEyeInvisible className="text-2xl  text-[#181818] text-opacity-75" />
                 ) : (
-                  <AiOutlineEye className="text-3xl  text-[#181818] text-opacity-75" />
+                  <AiOutlineEye className="text-2xl  text-[#181818] text-opacity-75" />
                 )}
               </span>
             </span>

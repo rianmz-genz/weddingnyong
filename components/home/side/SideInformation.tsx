@@ -15,12 +15,12 @@ const SideInformation = () => {
       data-aos-duration="350"
       className="max-sm:hidden pt-8 z-10 fixed right-24 transition-all duration-300 lg:w-1/6 h-screen flex justify-start items-end flex-col"
     >
-      <Link
+      <a
         href="/auth/login"
         className="px-3 shadow-sm py-1 rounded-full bg-[#D0FF58] font-semibold"
       >
         Buat Undangan
-      </Link>
+      </a>
       <div className="w-11/12 h-fit p-2 bg-[#f3f4f6] rounded-lg mt-24 py-4 flex flex-col items-center">
         <div className="text-lg text-[#181818] font-semibold flex items-center">
           <img

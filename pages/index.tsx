@@ -54,13 +54,13 @@ export default function Home() {
           titleCreateInvitations="Langkah Pembuatan Undangan"
           descriptionCreateInvitations="Hanya butuh beberapa langkah dan menit saja hingga undangan Kamu siap digunakan"
         />
-        <SectionDesign
-          title="Pilih Desain"
-          description="Pilih tema undangan pernikahan yang menarik serta unik"
-        />
         <SectionPrices
           title="Harga Undangan"
           description="Pilih paket undangan pernikahan online sesuai dengan kebutuhanmu, tenang harganya terjangkau banget 😉"
+        />
+        <SectionDesign
+          title="Pilih Desain"
+          description="Pilih tema undangan pernikahan yang menarik serta unik"
         />
         <SectionTestimonials
           title="Apa Yang Mereka Katakan?"

@@ -32,6 +32,7 @@ const SectionTestimonials: FC<SectionTestimonialsProps> = ({
         {description}
       </p>
       <Swiper
+      data-aos="fade-up"
         modules={[Navigation, Pagination, Autoplay]}
         className="w-1/2 mt-8 mb-12 cursor-grab bannerswiper max-sm:w-full"
         spaceBetween={8}
