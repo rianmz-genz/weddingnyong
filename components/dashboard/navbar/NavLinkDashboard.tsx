@@ -1,10 +1,12 @@
 import { useState, useEffect, ReactNode, FC } from "react";
+import { useRouter } from 'next/router';
 
 const NavLinkDashboard: FC<NavLinkProps> = ({ children, target }) => {
   const [isActive, setIsActive] = useState<boolean>(false);
-
+  const headerHeight: number = 82;
+  const {asPath} = useRouter()
   useEffect(() => {
-      if (target === "/dashboard/user/") {
+      if (asPath === target) {
         setIsActive(true);
       }
   }, [target]);

@@ -52,7 +52,7 @@ const NavbarDashboard = () => {
           </button>
         </div>
         <NavItemDashboard show={isMenuOpen}>
-          <NavLinkDashboard target="/dashboard/user/">
+          <NavLinkDashboard target="/dashboard/user">
             <CgHomeAlt />
             Beranda
           </NavLinkDashboard>

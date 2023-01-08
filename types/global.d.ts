@@ -1,4 +1,5 @@
-// props Homepage
+
+// props 
 declare interface ContainerContentProps{
     children: ReactNode
 }
@@ -35,7 +36,14 @@ declare interface SectionHomeProps{
     copyright: string
     description: string
   }
-
+  declare interface TemplateTitleProps{
+    title: string
+    value: string
+    setValue: React.Dispatch<React.SetStateAction<string>>
+  }
+  declare interface ListInvitationsProps{
+    slug: string
+  }
 //   content Datas 
 declare interface feature{
     logo?: string
@@ -69,6 +77,7 @@ declare interface contentData{
     designs: design[]
     prices: prices[]
     testimonials: testimonials[]
+    invitations: Invitations[]
 }
 // users
 declare interface login {
@@ -80,5 +89,17 @@ declare interface ProfileProps{
     name: string
     gmail: string
     username?: string | undefined
+}
+
+// bukutamu
+declare interface Invitations{
+    slug: string
+    guest: Guest[]
+}
+declare interface Guest{
+    guestname: string
+    whatsapp: string
+    attedance?: boolean
+    qr: string
 }
 
