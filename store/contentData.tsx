@@ -220,6 +220,7 @@ const contentData: contentData = {
   ],
   invitations: [
     {
+      id: "1",
       slug: "weddingnyong.com/invitation/ucuplovesurti",
       guest: [
         {
@@ -243,12 +244,13 @@ const contentData: contentData = {
       ],
     },
     {
+      id: "2",
       slug: "weddingnyong.com/invitation/adrianlovevinka",
       guest: [
         {
           guestname: "Adrian",
           whatsapp: "+62882687287",
-          attedance: false,
+          attedance: true,
           qr: "sjkdkajsd",
         },
         {
@@ -266,7 +268,7 @@ const contentData: contentData = {
         {
           guestname: "Adrian",
           whatsapp: "+62882687287",
-          attedance: false,
+          attedance: true,
           qr: "sjkdkajsd",
         },
         {

@@ -40,9 +40,17 @@ declare interface SectionHomeProps{
     title: string
     value: string
     setValue: React.Dispatch<React.SetStateAction<string>>
+    link: string
   }
   declare interface ListInvitationsProps{
+    id: string
     slug: string
+  }
+  declare interface ListGuestProps{
+    guestname: string
+    whatsapp: string
+    attedance: boolean | undefined
+    qr: string
   }
 //   content Datas 
 declare interface feature{
@@ -93,7 +101,8 @@ declare interface ProfileProps{
 
 // bukutamu
 declare interface Invitations{
-    slug: string
+    id: string,
+    slug: string,
     guest: Guest[]
 }
 declare interface Guest{

@@ -25,10 +25,10 @@ const SectionInvitations = () => {
         gmail="ucup@gmail.com"
         username=""
       />
-      <TemplateTitle title="Undanganmu" value={value} setValue={setValue} />
+      <TemplateTitle title="Undanganmu" value={value} setValue={setValue} link="/create/invitation"/>
       <ul className="w-11/12 mt-10">
         {contentData.invitations.map((invitation, index) => (
-          <ListInvitations key={index} slug={invitation.slug} />
+          <ListInvitations key={index} slug={invitation.slug} id={invitation.id} />
         ))}
       </ul>
     </section>
